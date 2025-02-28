@@ -63,3 +63,30 @@ basic.forever(function () {
             `)
     }
 })
+basic.forever(function () {
+    if (IR_waarde == vooruit) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 30)
+    }
+})
+basic.forever(function () {
+    if (IR_waarde == achteruit) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 30)
+    }
+})
+basic.forever(function () {
+    if (IR_waarde == links) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
+    }
+})
+basic.forever(function () {
+    if (IR_waarde == rechts) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
+    }
+})
+basic.forever(function () {
+    if (IR_waarde == stop) {
+        maqueen.motorStop(maqueen.Motors.All)
+    }
+})
