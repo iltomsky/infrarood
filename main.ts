@@ -1,3 +1,4 @@
+let strip = 0
 let IR_waarde = 0
 IR.IR_init()
 let vooruit = 39
@@ -84,6 +85,9 @@ basic.forever(function () {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
     }
+})
+basic.forever(function () {
+    strip = 0
 })
 basic.forever(function () {
     if (IR_waarde == stop) {
